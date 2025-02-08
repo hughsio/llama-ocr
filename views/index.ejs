@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR App</title>
+    <!-- Add markdown-it for rendering markdown -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Llama OCR</h1>
+        <form id="ocrForm">
+            <div class="file-upload">
+                <input type="file" 
+                       name="image" 
+                       id="file-input" 
+                       class="file-upload-input" 
+                       accept="image/*" 
+                       required>
+                <label for="file-input" class="file-upload-label">
+                    Click to upload or drag and drop an image
+                </label>
+                <div class="file-name"></div>
+            </div>
+            <button type="submit">Process Image</button>
+        </form>
+        
+        <div class="upload-history">
+            <h2>Upload History</h2>
+            <div class="upload-list">
+                <!-- Upload items will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay"></div>
+    <div class="result-modal">
+        <div class="modal-header">
+            <h2>OCR Result</h2>
+            <div>
+                <button class="copy-button">Copy</button>
+                <button class="close-button">Close</button>
+            </div>
+        </div>
+        <div class="markdown-output"></div>
+    </div>
+
+    <div class="loading">Processing image...</div>
+    <div class="success-message">Text copied to clipboard!</div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

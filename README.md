@@ -20,8 +20,8 @@
 import { ocr } from "llama-ocr";
 
 const markdown = await ocr({
-  filePath: "./trader-joes-receipt.jpg", // path to your image (soon PDF!)
-  apiKey: process.env.TOGETHER_API_KEY, // Together AI API key
+  filePath: "/Users/hugh/Documents/Documents/Screenshot 2024-04-25 at 23.24.43.png",
+  apiKey: process.env.TOGETHER_API_KEY, 
 });
 ```
 ## Hosted Demo

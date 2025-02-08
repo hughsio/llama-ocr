@@ -1,21 +1,23 @@
 {
-  "name": "llama-ocr",
-  "version": "0.0.6",
-  "description": "Image to markdown (OCR) with Llama 3.2 Vision.",
+  "name": "ocr-app",
+  "version": "1.0.0",
+  "description": "OCR Application with image upload and history",
   "author": "Hassan El Mghari (@nutlope)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nutlope/llama-ocr.git"
   },
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "tsx ./test/index.ts"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup": "mkdir -p uploads && npm install"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
+    "nodemon": "^2.0.22",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
@@ -28,6 +30,18 @@
     "Llama"
   ],
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "llama-ocr": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
     "together-ai": "^0.9.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/Nutlope/llama-ocr/issues"
+  },
+  "homepage": "https://github.com/Nutlope/llama-ocr#readme"
 }
